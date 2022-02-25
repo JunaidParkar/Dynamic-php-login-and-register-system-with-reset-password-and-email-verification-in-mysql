@@ -17,7 +17,7 @@
         $name = mysqli_query($con, $get_name);
         if (mysqli_num_rows($name) > 0) {
             $got = mysqli_fetch_assoc($name);
-            $us = $got['usernamr'];
+            $us = $got['username'];
             $update_id = "UPDATE `users` SET `registeration_id`='$new_regid' WHERE `username` = '$us'";
             mysqli_query($con, $update_id);
         }
